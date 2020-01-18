@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CIT 261 - Week 2 Team Assignment</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Megan Hendrickson</h1>
+        <h2>CIT 261 Portfolio</h2>
+    </header>
+    <main>
+        <h2>Week 2 Team Assingment</h2>
+        <h3>Requirement 1</h3>
+        <p>Enter a number:</p>
+        <input type="text" id="input1" />
+        <button id="button1" onclick="req1()">Submit</button>
+        <div id="output1"></div>
+
+        <h3>Requirement 2</h3>
+        <p>Click for a sum of all numbers up to the number entered above.</p>
+        <button id="button2" onclick="req2()">Sum</button>
+        <div id="output2"></div>
+
+        <h3>Requirement 3</h3>
+        <p>Enter another number:</p>
+        <input type="text" id="input2" />
+        <p>Click to add first number and second number.</p>
+        <button id="button3" onclick="req3()">Add</button>
+        <div id="output3"></div>
+
+        <script>
+            function req1() {
+                //get the input
+                const input = document.getElementById('input1').value;
+                //define output
+                const outputElement = document.getElementById('output1');
+                //display output
+                outputElement.innerHTML = 'You entered:' + input;
+            }
+
+            function req2() {
+                //get the input
+                const input = document.getElementById('input1').value;
+                //define the output
+                const outputElement = document.getElementById('output2');
+                // convert input to integer
+                const inputInt = parseInt(input);
+                // if input is a number, run sum function, and display output
+                if (inputInt !== NaN) {
+                    outputElement.innerHTML = 'Total = ' + sum(inputInt);
+                }
+            }
+
+            function sum(input) {
+                let total = 0;
+                for (let i = 1; i <= input; i++) {
+                    total += i;
+                }
+                return total;
+            }
+
+            function req3() {
+                //get the input
+                const input = document.getElementById('input1').value;
+                const input2 = document.getElementById('input2').value;
+                //define the output
+                const outputElement = document.getElementById('output3');
+                // convert input to integer
+                const num1Float = parseFloat(input);
+                const num2Float = parseFloat(input2);
+                // if both input is a number, add them together, and display output
+                if ((num1Float !== NaN) & (num2Float !== NaN)) {
+                    const total = num1Float + num2Float;
+                    outputElement.innerHTML = 'Total: ' + total;
+                }
+            }
+        </script>
+    </main>
+    <br>
+    <br>
+    <footer>
+        <hr>
+        <p>Team 10: Megan Hendrickson and Ali Linde</p>
+        <p><a href="../index.html">Return to CIT261 Navigation</a></p>
+    </footer>
+</body>

@@ -1,8 +1,13 @@
+html {
+    background-color: darkgrey;
+}
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
     max-width: 484px;
+    margin: 0px auto;
+    border: 1px solid black;
 }
 
 /* Style the Header */
@@ -15,16 +20,18 @@ header {
 #title {
     margin: 10px 0px 3px 0px;
 }
+
 #subtitle {
     margin: 0px 0px 3px 0px;
-text-transform: uppercase;
-font-size: medium;
+    text-transform: uppercase;
+    font-size: medium;
 }
 
 /* Style main content */
 main {
     padding: 0px 10px;
 }
+
 /* Style main menu links */
 .mainmenu {
     list-style-type: none;
@@ -43,9 +50,7 @@ main {
     text-decoration: underline;
 }
 
-/* Style the content */
-main {
-    padding: 10px;
-    height: 200px;
-    /* Should be removed. Only for demonstration */
+footer {
+    margin-top: 25px;
+    padding: 0px 10px;
 }
