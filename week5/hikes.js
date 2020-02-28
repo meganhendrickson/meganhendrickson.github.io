@@ -34,8 +34,7 @@ const hikeList = [
   }
 ];
 
-const imgBasePath = 'images/';
-  
+const imgBasePath = "/week5/images/";
 
 export default class Hikes {
   constructor(elementId) {
