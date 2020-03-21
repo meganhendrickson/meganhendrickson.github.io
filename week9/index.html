@@ -63,7 +63,7 @@
    
     function playSound(e){
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // key selctor for audio
-      const key = document.querySelector(`audio[data-key="${e.keyCode}"]`); // key selector for visual
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); // key selector for visual
       console.log(audio);
       if(!audio) return; //null - stop the function from running
       audio.currentTime = 0; //rewind to start of the sound for repetive hits
@@ -72,12 +72,12 @@
     }
 
     function removeTransition(e) {
-      if(e.propertyName !== 'transfrom')return; // skip it if it's not a transfrom
+      if(e.propertyName !== 'transform') return; // skip it if it's not a transfrom
       this.classList.remove('playing'); //remove class from the html to return styling to original
     }
 
     const keys = document.querySelectorAll('.key'); //key selector for event listenter
-    keys.forEach(key => key.addEventListener('transitioned', removeTransition)); //listens for a change then triggers function to change styling
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //listens for a change then triggers function to change styling
     window.addEventListener('keydown', playSound); //listens for key press and triggers function to play sound & change styling
   </script>
 
