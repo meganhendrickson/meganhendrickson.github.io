@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Recipe Project</title>
+    <link href="styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <a href="./">
+            <h1 class="header header__title">The Recipe App</h1>
+        </a>
+        <h2 class="header__subtitle">Recipe Box and Meal Planning
+        </h2>
+    </header>
+    <main>
+        <h2>Add New Recipe</h2>
+        <br>
+        <label>Recipe Title:</label><br>
+        <input class="input" type="text" id="recipe-name" placeholder="Add a recipe name"><br>
+        <br>
+        <label>Instructions:</label>
+        <textarea class="description" id="recipe-description" placeholder="Recipe Steps" rows="10"
+            cols="80%"></textarea><br><br>
+
+        <div id="ingredients-container">
+            <label>Ingredients</label>
+            <p>After adding your ingredient, use the checkbox to indicate if you have it in stock.</p>
+            <div id="ingredients-section">
+                <!-- Ingredients list generated here -->
+            </div>
+            <form id="ingredient-form">
+                <input class="input" type="text" name="ingredient-name" placeholder="Add ingredient">
+                <button class="button" type="submit" id="add-ingredient-button">Add Ingredient</button>
+            </form>
+            <div id="controls">
+                <button id="all-recipes-button" class="button">All Recipes</button>
+                <button class="button" id="add-recipe">Add New Recipe</button>
+            </div>
+    </main>
+    <footer>
+        <hr>
+        <script src="./scripts/uuidv4.js"></script>
+        <script src="./scripts/recipe-functions.js"></script>
+        <script src="./scripts/add-recipe.js"></script>
+        <a href="index.html">Return to portfolio navigation</a>
+    </footer>
+</body>
+
+</html>

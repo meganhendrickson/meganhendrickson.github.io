@@ -1,0 +1,2 @@
+ingredients = getShoppingListIngredients()
+renderShoppingList(ingredients)

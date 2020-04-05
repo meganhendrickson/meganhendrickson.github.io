@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Recipe App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="./">
+            <h1 class="header header__title">The Recipe App</h1>
+        </a>
+        <h2class="header__subtitle">Recipe Box and Meal Planning
+            </h2>
+    </header>
+    <main>
+
+        <h2>Edit Recipe</h2>
+        <br>
+        <label>Recipe Title:</label><br>
+        <input class="input" type="text" id="recipe-name" placeholder="Add a recipe name">
+        <br><br>
+        <label>Instructions:</label><br>
+        <textarea id="recipe-description" placeholder="Recipe Steps" rows="10" cols="80%"></textarea>
+        <br><br>
+        <label>Ingredients:</label>
+        <p>After adding your ingredient, use the checkbox to indicate if you have it in stock.</p>
+        <div id="ingredients-section">
+            <!-- Ingredient list generated here -->
+        </div>
+        <form id="ingredient-form">
+            <input class="input" type="text" name="ingredient-name" placeholder="Add ingredient">
+            <button class="button" id="add-ingredient-button">Add Ingredient</button>
+        </form>
+        <button id="all-recipes-button" class="button">All Recipes</button>
+        <button class="button" id="update-recipe">Update Recipe</button>
+
+        <h3>Danger Zone</h3>
+        <button class="button-danger" id="delete-recipe-button">Delete Recipe</button>
+    </main>
+    <footer>
+        <hr>
+        <script src="./scripts/uuidv4.js"></script>
+        <script src="./scripts/recipe-functions.js"></script>
+        <script src="./scripts/edit-recipe.js"></script>
+        <a href="index.html">Return to portfolio navigation</a>
+    </footer>
+</body>
+
+</html>
