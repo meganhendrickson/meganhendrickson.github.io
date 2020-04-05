@@ -49,3 +49,8 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+footer{
+  padding: 10px 10px;
+  font-size: 1em;
+}
