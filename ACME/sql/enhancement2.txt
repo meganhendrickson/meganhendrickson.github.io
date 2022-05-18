@@ -1,0 +1,52 @@
+=================================================================
+SQL #1 - Insert the following new client to the clients table.
+=================================================================
+INSERT INTO clients 
+    (clientFirstname, clientLastname, clientEmail, clientPassword, comments)
+VALUES
+    ("Tony", "Stark", "tony@starkent.com", "Iam1ronM@n", "I am the real Ironman");
+
+
+========================================================================
+SQL #2 - Modify the Tony Stark record to change the clientLevel to 3.
+========================================================================
+UPDATE clients
+SET clientLevel = 3
+WHERE clientId = 1;
+
+
+===============================================
+SQL #3 - Modify the "Nylon Rope" record to 
+read "Climbing Rope" using a single query.
+===============================================
+UPDATE 
+    inventory 
+SET
+	invName = 
+        REPLACE('Nylon Rope', 'Nylon', 'Climbing'),
+    invDescription = 
+        REPLACE('This nylon rope is ideal for all uses. Each rope is the highest 
+        quality nylon and comes in 100 foot lengths.', 'nylon rope', 'climbing rope')
+WHERE 
+	invId = 15;
+
+
+===================================================================
+SQL #4 - Use an inner join to select the invName field from the 
+inventory table and the categoryName field from the categories
+table for inventory items that belong to the "Misc" category.
+===================================================================
+SELECT inventory.invName, categories.categoryName
+FROM inventory
+INNER JOIN categories
+ON categories.categoryId = 3;
+
+
+============================================================
+SQL #5 - Delete the Koenigsegg CCX car from the database.
+============================================================
+DELETE 
+FROM 
+    inventory
+WHERE
+    invId = 7;

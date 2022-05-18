@@ -1,0 +1,12 @@
+This file is here so I have an easy spot to copy and paste 
+client data for testing while working on assingments. 
+
+Firstname: Admin
+Lastname: User
+Email: admin@cit336.net
+Password: Sup3rU$er
+
+Firstname: Norm
+Lastname: User
+Email: norm@cit336.net
+Password: N0rmU$er

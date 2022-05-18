@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/*! main.css */
+
+/* colors selected by CIT 336 
+    --black: #000000;
+    --blue: #0000ee;
+    --grey: #808080;
+    --maroon: #990033;
+    --red: #de2226;
+    --yellow: #f8f192;
+    --white: #ffffff;*/
+
+html {
+    background-image: url(../images/site/background.jpg);
+    background-position: left top;
+}
+
+body {
+    margin: 15px 5px;
+    font-size: 1.1em;
+    line-height: 1.4;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 1.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/* Header */
+/* My Account login/logout link and message*/
+.accountmenu {
+    float: right;
+    padding: 10px 5px;
+}
+
+span {
+    margin-right: 10px;
+}
+
+#accounticon {
+    height: 1em;
+}
+
+/* logo image and div */
+.logo {
+    padding: 5px;
+}
+
+#logo {
+    height: 100px;
+}
+
+/* main navigation */
+nav {
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: #de2222;
+}
+
+.navigation {
+    list-style: none;
+    text-align: center;
+}
+
+.navigation li:first-child {
+    display: block;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: #fff;
+    padding: .75rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #de2222;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.responsive li {
+    display: block;
+}
+
+
+section {
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: .75em;
+    border-top: 2px solid black;
+    padding: 10px;
+}
+
+/* Feature on ACME homepage */
+.rocketfeature {
+    position: relative;
+}
+
+.rocketfeature ul {
+    list-style: none;
+    color: #990033;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: .75em;
+}
+
+#actionbtn {
+    width: 60%;
+}
+
+/* product reviews on ACME homepage */
+.productreview {
+    padding: 0px 25px;
+}
+
+/* Recipe table on ACME homepage */
+.recipeimg {
+    height: 100px;
+}
+
+td {
+    text-align: center;
+    width: 50%;
+    margin: 0px;
+}
+
+.img {
+    background-color: #808080;
+}
+
+/* Notification isset message */
+.notice {
+    color: #de2222;
+    font-size: 1.25em;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-weight: 700;
+
+}
+
+/* Forms */
+fieldset {
+    background-color: #f8f192;
+}
+
+label {
+    color: #808080;
+    font-weight: bold;
+    display: inline-block;
+    width: 500px;
+    margin-top: 5px;
+}
+
+select {
+    height: 30px;
+    width: 303px;
+}
+
+input {
+    height: 25px;
+    width: 300px;
+}
+
+input.button {
+    margin-top: 20px;
+    height: 40px;
+    background-color: #de2222;
+    color: #ffffff;
+    font-size: 1.25em;
+}
+
+/* Products Management Table */
+#productsDisplay {
+    text-align: left;
+}
+
+#productsDisplay th,
+td {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#productsDisplay td.modify {
+    width: 135px;
+    text-align: right;
+}
+
+#productsDisplay td.delete {
+    width: 135px;
+}
+
+/* Products by category display */
+ul#prod-display {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul#prod-display li {
+    margin: 25px;
+}
+
+img.prodthumb {
+    max-height: 100px;
+}
+
+ul#prod-display h4 {
+    margin: 0px;
+}
+
+/* Product detail view display */
+#product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#product-img {
+    max-width: 90%;
+    margin: auto;
+}
+
+#tn-display img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+#prodreviews {
+    margin-top: 30px;
+}
+
+.rdata {
+    padding-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: .85em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.reviewtext {
+    background-color: #f8f192;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        margin: 20px;
+    }
+
+    .navigation {
+        text-align: left;
+    }
+
+    .navigation li:first-child {
+        display: none;
+    }
+
+    .navigation li {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .navigation li a {
+        color: white;
+    }
+
+    .rocketfeature ul {
+        top: 20%;
+        left: 60%;
+        font-size: 1em;
+    }
+
+    #actionbtn {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        max-width: 900px;
+    }
+
+    .flexcontainer {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #featured-recipes {
+        width: 300px;
+        padding-top: 0px;
+    }
+
+    /* Product detail view display */
+    #product-info {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #product-img {
+        max-width: 50%;
+        margin-right: 50px;
+    }
+
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        margin: 15px auto;
+    }
+}
